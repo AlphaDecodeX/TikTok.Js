@@ -3,6 +3,7 @@ import "./Video.css"
 import { useRef } from 'react';
 import { useState } from 'react';
 import VideoFooter from './VideoFooter';
+import VideoSidebar from './VideoSidebar';
 
 function Video() {
     const [playing, setPlaying] = useState(false);
@@ -27,7 +28,8 @@ function Video() {
                 loop
                 src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4">
             </video>
-            <VideoFooter />
+            <VideoFooter channel={"lpsk"} description={"MERN STACK TIKTOK"} song={"ABCD - Jazz"} />
+            <VideoSidebar likes={1566} shares={42} messages={527} />
         </div>
     )
 }
