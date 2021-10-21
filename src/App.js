@@ -16,28 +16,20 @@ function App() {
     fetchPosts();
   }, [])
 
-  console.log(videos);
-
   return (
     <div className="app">
       <div className="app__videos">
-        <Video url="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4"
-          channel='redLady'
-          description='Swimming Jazz'
-          song='ABCD Song'
-          likes={123}
-          messages={456}
-          shares={345}
-        />
-        <Video url="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4"
-          channel='redLady'
-          description='Swimming Jazz'
-          song='ABCD Song'
-          likes={1237}
-          messages={4756}
-          shares={415}
-        />
-
+        {videos.map(video => (
+          <Video
+            url={video.url}
+            channel={video.channel}
+            song={video.song}
+            likes={video.likes}
+            messages={video.messages}
+            description={video.description}
+            shares={video.shares}
+          />
+        ))}
 
       </div>
 
