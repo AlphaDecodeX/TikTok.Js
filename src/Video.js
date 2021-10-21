@@ -5,7 +5,7 @@ import { useState } from 'react';
 import VideoFooter from './VideoFooter';
 import VideoSidebar from './VideoSidebar';
 
-function Video() {
+function Video({ url, channel, description, song, likes, shares, messages }) {
     const [playing, setPlaying] = useState(false);
     const videoRef = useRef(null);
     const handleVideoPress = () => {
@@ -26,10 +26,10 @@ function Video() {
                 ref={videoRef}
                 onClick={handleVideoPress}
                 loop
-                src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-in-a-pool-1259-large.mp4">
+                src={url}>
             </video>
-            <VideoFooter channel={"lpsk"} description={"MERN STACK TIKTOK"} song={"ABCD - Jazz"} />
-            <VideoSidebar likes={1566} shares={42} messages={527} />
+            <VideoFooter channel={channel} description={description} song={song} />
+            <VideoSidebar likes={likes} shares={shares} messages={messages} />
         </div>
     )
 }
