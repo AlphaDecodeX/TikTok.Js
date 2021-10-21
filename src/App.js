@@ -1,9 +1,20 @@
 import './App.css';
+import Video from './Video';
 
 function App() {
   return (
     <div className="app">
-      <h1>TikTok-MERN Stack</h1>
+      <div className="app__videos">
+        <Video />
+        <Video />
+
+      </div>
+
+      {/* App Container */}
+      {/* Videos */}
+      {/* <Videos/> */}
+      {/* <Videos/> */}
+      {/* <Videos/> */}
     </div>
   );
 }
